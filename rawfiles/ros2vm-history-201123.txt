@@ -1,0 +1,1000 @@
+  698  pip install jupyter-ros2
+  699  cd ~/Downloads/
+  700  cd jupyter-ros2/
+  701  pip install -e .
+  702  pip list | grep ros
+  703  jupyter nbextension enable --py jupyros
+  704  jupyter nbextension enable --py jupyros2
+  705  jupyter nbextension install --py --symlink --sys-prefix jupyros2
+  706  pip list | grep ros
+  707  pip list | grep jupy
+  708  ll
+  709  cd jupyros
+  710  l
+  711  cd ..
+  712  vim setup.py 
+  713  pip install jupyros
+  714  pip list | grep jupyros
+  715  jupyter nbextension enable --py jupyros
+  716  jupyter nbextension list
+  717  pip uninstall jupyros
+  718  pip install jupyros
+  719  jupyter nbextension enable --py jupyros
+  720  jupyter nbextension list
+  721  pip install jupyter-ros
+  722  cd ~/ROS2Dev/jupyter-test/
+  723  l
+  724  jupyter-lab
+  725  rm -rf my_python_pkg/
+  726  cd ..
+  727  colcon build 
+  728  source install/setup.bash
+  729  actapt 
+  730  sudo apt upgrade -y
+  731  cd ROS2Dev/ros2_ws/src/
+  732  ll
+  733  git pull origin main
+  734  git remote add origin https://github.com/arrg-mx/ros2course-2024-1.git
+  735  git pull origin main
+  736  rm -rf .git/
+  737  rm Readme.md 
+  738  git init
+  739  git remote add origin https://github.com/arrg-mx/ros2course-2024-1.git
+  740  git pull origin main
+  741  rm .gitignore 
+  742  git pull origin main
+  743  git status
+  744  ll
+  745  code .
+  746  cd ..
+  747  ll
+  748  rm -rf jupyter-test/
+  749  ll
+  750  mkdir -p arrg_ws/src
+  751  cd arrg_ws/
+  752  colcon build
+  753  cd src 
+  754  code
+  755  code .
+  756  git init
+  757  ll
+  758  ros2 pkg create ydofbot
+  759  cd ydofbot/
+  760  ll
+  761  rm -rf include/ src/
+  762  ll
+  763  mkdir ydofbot
+  764  ll
+  765  cd ..
+  766  ll
+  767  rm -rf ydofbot/
+  768  ll
+  769  rm -rf dofbot_description/urdf/.ipynb_checkpoints/
+  770  cd ..
+  771  colcon build
+  772  source ~/ROS2Dev/arrg_ws/install/setup.bash 
+  773  cd ../arrg_ws/src/
+  774  ros2 pkg create dofbot_description
+  775  cd dofbot_description/
+  776  ll
+  777  rm -rf include/ src/
+  778  l
+  779  cd ..
+  780  code .
+  781  cd ROS2Dev/
+  782  ll
+  783  mkdir temp
+  784  cd temp/
+  785  git clone https://github.com/rivascf/yahboom-dofbot.git
+  786  cd yahboom-dofbot/
+  787  ll
+  788  cd dofbot_info/
+  789  ls
+  790  man cp
+  791  lt .
+  792  cp -r urdf/ ~/ROS2Dev/arrg_ws/src/dofbot_description/
+  793  cp -r meshes/ ~/ROS2Dev/arrg_ws/src/dofbot_description/
+  794  cd ROS2Dev/arrg_ws/src/
+  795  code .
+  796  pip3 list
+  797  pip3 install roboticstoolbox-python
+  798  pip3 update numpy
+  799  pip3 upgrade numpy
+  800  pip3 
+  801  pip3 install numpy
+  802  pip3 install numpy --upgrade
+  803  jupyter-lab
+  804  cd ROS2Dev/
+  805  ll
+  806  mkdir -p robotics_analisys/notebooks
+  807  cd robotics_analisys/notebooks
+  808  jupyter-lab
+  809  ros2 pkg create --build-type ament_cmake  gazebo_ros2_control
+  810  cd ..
+  811  colcon build
+  812  source install/setup.bash
+  813  cd src/
+  814  rm -rf gazebo_ros2_control/
+  815  cd ..
+  816  colcon build
+  817  source install/setup.bash
+  818  cd src
+  819  l
+  820  cd dofbot_description/
+  821  touch launch/start_world.launch.py
+  822  touch worlds/empty_world.world
+  823  l
+  824  rm -rf include/ src/
+  825  l
+  826  cd ..
+  827  cd src/
+  828  actapt 
+  829  sudo apt upgrade
+  830  cd ROS2Dev/
+  831  ll
+  832  cd temp/
+  833  ll
+  834  rm -rf yahboom-dofbot/
+  835  git clone https://github.com/rivascf/yahboom-dofbot.git
+  836  l
+  837  cd yahboom-dofbot/
+  838  ll
+  839  rm CMakeLists.txt 
+  840  ll
+  841  cd ..
+  842  ll
+  843  cd arrg_ws/
+  844  ll
+  845  cd src
+  846  ll
+  847  rm -rf dofbot_description/
+  848  rm -rf .vscode/ .git
+  849  cd ..
+  850  ll
+  851  rm -rf build/ install/ log/
+  852  colcon build
+  853  l
+  854  cd src
+  855  ros2 pkg create dofbot_desription
+  856  rm -rf dofbot_desription/
+  857  ros2 pkg create dofbot_description --build-type ament_cmake
+  858  code .
+  859  l
+  860  cd dofbot_description/
+  861  l
+  862  rm -rf include/ src/
+  863  cp ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/meshes/ -p ./model/
+  864  cp ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/meshes/* -p ./model/meshes/
+  865  cp ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/meshes/* -P ./model/meshes/
+  866  cp -r ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/meshes/* -P ./model/meshes/
+  867  mdir -p /model/meshes
+  868  mkdir -p /model/meshes
+  869  l
+  870  mkdir -p ./model/meshes
+  871  cp -r ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/meshes/* -P ./model/meshes/
+  872  lt
+  873  mkdir -p ./urdf
+  874  cp -r ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/urdf/* -P ./urdf/
+  875  mkdir -p ./urdf
+  876  lt
+  877  lt ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/
+  878  lt ~/ROS2Dev/temp/yahboom-dofbot/dofbot_config/
+  879  cd
+  880  cd ROS2Dev/arrg_ws/src/
+  881  ls
+  882  ros2 pkg create --build-type ament_python dofbot_description
+  883  code .
+  884  cd ..
+  885  l
+  886  colcon build
+  887  cd src/
+  888  ros2 pkg create --build-type ament_cmake dofbot_description --dependencies rclpy gazebo_ros dofbot_description
+  889  ll
+  890  cd dofbot_description/
+  891  l
+  892  mkdir launch/ worlds/ 
+  893  l
+  894  cd ..
+  895  code .
+  896  cd ../../temp/
+  897  ll
+  898  mkdir x3plus
+  899  cd x3plus/
+  900  git clone -b yahboomcar https://github.com/rivascf/yahboom-dofbot.git
+  901  cd yahboom-dofbot/
+  902  ll
+  903  vim yahboomcar_description/urdf/yahboomcar_X3plus.urdf
+  904  cd ~/ROS2Dev/arrg_ws/
+  905  colcon build
+  906  source install/setup.bash 
+  907  colcon build
+  908  cd src/
+  909  ll
+  910  lt dofbot_description/
+  911  cd ..
+  912  ll src/
+  913  colcon build
+  914  source install/setup.bash
+  915  cd src/
+  916  code .
+  917  cd ROS2Dev/arrg_ws/
+  918  ll
+  919  lt src/
+  920  lt src/*
+  921  cd src/
+  922  lt
+  923  ll
+  924  cd ..
+  925  ll
+  926  rm -rf build/ install/ log/
+  927  ll
+  928  colcon build
+  929  setup install/setup.bash
+  930  cd src/
+  931  ros2 pkg create --build-type ament_cmake dofbot_description
+  932  cd ..
+  933  colcon build
+  934  setup install/setup.bash
+  935  cd src/
+  936  cd dofbot_description/
+  937  l
+  938  rm -rf include/ src/
+  939  l
+  940  mkdir /models
+  941  mkdir ./models
+  942  mkdir ./urdf
+  943  l
+  944  mkdir -p models/arm/visual
+  945  mkdir -p models/arm/collision
+  946  lt ~/ROS2Dev/temp/x3plus/
+  947  cp ~/ROS2Dev/temp/x3plus/yahboom-dofbot/yahboomcar_description/meshes/X3plus/visual/* ./models/arm/visual/
+  948  cp ~/ROS2Dev/temp/x3plus/yahboom-dofbot/yahboomcar_description/meshes/X3plus/collision/* ./models/arm/collision/
+  949  lt models/arm/n
+  950  lt models/arm/
+  951  cp 
+  952  mv models/arm/visual/base_link.STL models/arm/visual/x3plus_base_link.STL 
+  953  mv models/arm/collision/base_link.STL models/arm/collision/x3plus_base_link.STL 
+  954  lt models/arm/
+  955  cp ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/meshes/* ./models/arm/visual/
+  956  cp ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/meshes/* ./models/arm/collision/
+  957  lt models/arm/
+  958  ll models/arm/
+  959  ll models/arm/visual/
+  960  cd ..
+  961  l
+  962  code .
+  963  cp ~/ROS2Dev/temp/yahboom-dofbot/dofbot_moveit/urdf/* ./dofbot_description/urdf/
+  964  cp ~/ROS2Dev/temp/x3plus/yahboom-dofbot/yahboomcar_description/urdf/* ./dofbot_description/urdf/
+  965  source ../install/setup.bash
+  966  cd ROS2Dev/arrg_ws/
+  967  source install/setup.bash
+  968  cd src
+  969  code .
+  970  cd ..
+  971  colcon build
+  972  source install/setup.bash
+  973  cd ROS2Dev/
+  974  ll
+  975  cd arrg_ws/
+  976  source install/setup.bash
+  977  code .
+  978  cd src/
+  979  code .
+  980  cd ..
+  981  cd install/dofbot_description/
+  982  l
+  983  cd share/
+  984  l
+  985  cd dofbot_description/
+  986  l
+  987  cd ..
+  988  cd src
+  989  actapt 
+  990  vim .bash_aliases 
+  991  source .bashrc 
+  992  updapt 
+  993  vim .bash_aliases 
+  994  vim ~/.config/nvim/init.lua 
+  995  cd ROS2Dev/
+  996  ll
+  997  cd arrg_ws/src/
+  998  vim dofbot_description/launch/demo.launch.py 
+  999  source ../install/setup.bash
+ 1000  vim dofbot_description/launch/demo.launch.py 
+ 1001  cd ..
+ 1002  vim ~/.config/nvim/init.lua 
+ 1003  vim ~/Downloads/FontPatcher/readme.md 
+ 1004  nano  ~/Downloads/FontPatcher/readme.md 
+ 1005  fontforge --script ./font-patcher --complete .fonts/SourceCodePro/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
+ 1006  ~/Downloads/FontPatcher/fontforge --script ./font-patcher --complete .fonts/SourceCodePro/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
+ 1007  . ~/Downloads/FontPatcher/fontforge --script ./font-patcher --complete .fonts/SourceCodePro/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
+ 1008  python3 ~/Downloads/FontPatcher/fontforge.py --script ./font-patcher --complete .fonts/SourceCodePro/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
+ 1009  cd ~/Downloads/FontPatcher/
+ 1010  ll
+ 1011  cd ~/.fonts/
+ 1012  cd SourceCodePro/
+ 1013  l
+ 1014  ~/Downloads/FontPatcher/fontforge --script ./font-patcher --complete Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono.ttf 
+ 1015  ~/Downloads/FontPatcher/font-patcher  Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono.ttf 
+ 1016  vim ~/Downloads/FontPatcher/font-patcher 
+ 1017  ~/Downloads/FontPatcher/font-patcher  Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono.ttf 
+ 1018  sudo apt install fontforge python3-fontforge
+ 1019  ~/Downloads/FontPatcher/fontforge --script ./font-patcher --complete Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono.ttf 
+ 1020  fontforge -h
+ 1021  cd
+ 1022  vim ~/.config/nvim/init.lua 
+ 1023  cd ROS2Dev/ros2_ws/src
+ 1024  code .
+ 1025  source ./install/setup.bash
+ 1026  cd
+ 1027  ros2 launch turtlebot3_gazebo empty_world.launch.py 
+ 1028  ros2 topic list
+ 1029  ros2 topic echo /tb3_status 
+ 1030  source install/setup.bash
+ 1031  ros2 topic echo /tb3_status 
+ 1032  ros2 run turtlebot3_teleop teleop_keyboard 
+ 1033  source install/setup.bash
+ 1034  ros2 run tb3ctrl_py tb3_robot_state 
+ 1035  source install/setup.bash
+ 1036  ros2 run tb3ctrl_py tb3_robot_state 
+ 1037  cd ROS2Dev/ros2_ws/src/
+ 1038  git pull origin main
+ 1039  l
+ 1040  code .
+ 1041  cd ..
+ 1042  ll
+ 1043  mkdir -p pros2_ws/src
+ 1044  cd pros2_ws/
+ 1045  colcon build
+ 1046  source ./install/setup.bash
+ 1047  cp -r ../ros2_ws/src/* ./src/
+ 1048  cd src/
+ 1049  l
+ 1050  code .
+ 1051  cd ..
+ 1052  source ./install/setup.bash 
+ 1053  colcon build
+ 1054  source ./install/setup.bash 
+ 1055  cd src/
+ 1056  code .
+ 1057  cd ..
+ 1058  colcon build
+ 1059  ros2 run tb3ctrl_py go_circle_py 
+ 1060  colcon build --symlink-install --
+ 1061  colcon build --symlink-install
+ 1062  source ./install/setup.bash 
+ 1063  ros2 run tb3ctrl_py go_circle_py 
+ 1064  os2 run tb3ctrl_py go_circle_py 
+ 1065  ros2 run tb3ctrl_py go_circle_py 
+ 1066  cd src/
+ 1067  ros2 pkg create --build-type ament_cmake tb3ctrl_interfaces
+ 1068  rm -rf tb3ctrl_interfaces/src/ tb3ctrl_interfaces/include/
+ 1069  mkdir -p tb3ctrl_interfaces/msg
+ 1070  cd ..
+ 1071  colcon build --packages-select tb3ctrl_ctrl_interfaces
+ 1072  colcon build --packages-select tb3ctrl_ctrl_interface
+ 1073  colcon build --packages-select tb3ctrl_interfaces
+ 1074  source ./install/setup.bash
+ 1075  cd src
+ 1076  code .
+ 1077  ros2 run tb3ctrl_py go_circle_py 
+ 1078  ros2 interface show nav_msgs/Odometry
+ 1079  ros2 interface show nav_msgs/msg/Odometry 
+ 1080  cd ..
+ 1081  colcon build --symlink-install --packages-select tb3ctrl_py
+ 1082  source install/setup.bash
+ 1083  colcon build --symlink-install --packages-select tb3ctrl_py
+ 1084  source install/setup.bash
+ 1085  ros2 run tb3ctrl_py go_circle_py 
+ 1086  cd ROS2Dev/ros2_ws/
+ 1087  cd src
+ 1088  git pull origin main
+ 1089  cd ..
+ 1090  cd pros2_ws/
+ 1091  cd src
+ 1092  ls
+ 1093  code .
+ 1094  source ../install/setup.bash
+ 1095  code .
+ 1096  vim tb3ctrl_py/tb3ctrl_py/tb3_robot_state.py 
+ 1097  fontforge -version
+ 1098  history | grep jupyter
+ 1099  python3 -m pip list | grep jupyter
+ 1100  pip3
+ 1101  pip3 uninstall jupyter*
+ 1102  pip3 uninstall jupyter
+ 1103  python3 -m pip list | grep jupyter
+ 1104  python3 -m pip uninstall -y jupyter jupyter_core jupyter-client jupyter-console jupyterlab_pygments qtconsole notebook nbconvert nbformat nbclassic nbclient jupyterlab-widgets jupyter-events jupyter-server jupyter-server-terminals 
+ 1105  pip3 uninstall -y jupyter jupyter_core jupyter-client jupyter-console jupyterlab_pygments qtconsole notebook nbconvert nbformat nbclassic nbclient jupyterlab-widgets jupyter-events jupyter-server jupyter-server-terminals 
+ 1106  sudo pip3 uninstall -y jupyter jupyter_core jupyter-client jupyter-console jupyterlab_pygments qtconsole notebook nbconvert nbformat nbclassic nbclient jupyterlab-widgets jupyter-events jupyter-server jupyter-server-terminals 
+ 1107  pip3 uninstall -y jupyter jupyter_core jupyter-client jupyter-console jupyterlab_pygments qtconsole notebook nbconvert nbformat nbclassic nbclient jupyterlab-widgets jupyter-events jupyter-server jupyter-server-terminals 
+ 1108  history | grep jupyter
+ 1109  python3 -m pip list | grep jupyter
+ 1110  pip3 uninstall -y jupyter-contrib-core jupyter-contrib-nbextensions jupyter-lsp jupyter-nbextensions-configurator jupyterlab jupyterlab_server
+ 1111  python3 -m pip list | grep jupyter
+ 1112  pip3 uninstall -y jupyter-highlight-selected-word
+ 1113  python3 -m pip list | grep jupyter
+ 1114  ll
+ 1115  rm -rf .jupyter/ 
+ 1116  ls .ipython/
+ 1117  ls .ipython/profile_default/
+ 1118  ls .ipython/profile_default/log/
+ 1119  ls .ipython/profile_default/db/
+ 1120  ll
+ 1121  ls .ipython/profile_default/db/
+ 1122  ls .ipython/profile_default/
+ 1123  ls .ipython/profile_default/startup/
+ 1124  cat .ipython/profile_default/startup/README 
+ 1125  rm -rf .ipython/
+ 1126  ll
+ 1127  cd .local/
+ 1128  l
+ 1129  cd share/
+ 1130  ll
+ 1131  rm jupyter/
+ 1132  cd ..
+ 1133  ll
+ 1134  cd bin/
+ 1135  ll
+ 1136  ipython
+ 1137  cd ..
+ 1138  python3 -m pip list 
+ 1139  history | grep pip3 install
+ 1140  history | grep "pip3 install"
+ 1141  history | grep "pip install"
+ 1142  pip3 uninstall jupyros
+ 1143  pip uninstall notebook
+ 1144  pip3 uninstall notebook
+ 1145  pip3 install jupyter bqplot pyyaml ipywidgets
+ 1146  pip3 uninstall jupyter bqplot pyyaml ipywidgets
+ 1147  pip3 remove jupyter bqplot pyyaml ipywidgets
+ 1148  python3 -m pip list | grep jupyter
+ 1149  pip-autoremove jupyter -y
+ 1150  pip3
+ 1151  pip3 unistall -h
+ 1152  pip3 unistall 
+ 1153  pip3 uninstall
+ 1154  pip3 uninstall -h
+ 1155  python3 -m pip list | grep jupyter
+ 1156  pip3 uninstall -y jupyter jupyter_core jupyter-client jupyter-console jupyterlab_pygments qtconsole notebook nbconvert nbformat nbclassic nbclient jupyterlab-widgets jupyter-events jupyter-server jupyter-server-terminals 
+ 1157  python3 -m pip list | grep jupyter
+ 1158  pip3 uninstall -y jupyter-lsp jupyterlab jupyterlab_server
+ 1159  python3 -m pip list | grep jupyter
+ 1160  python3 -m pip list | more
+ 1161  reboot
+ 1162  pip3 install --upgrade pip
+ 1163  echo $(ip route get 1.1.1.1 | awk -F"src " '"'"'NR == 1{ split($2, a," ");print a[1]}'"'"')
+ 1164  echo $(ip route get 1.1.1.1 | awk -F "src " '"'"'NR == 1{ split($2, a," ");print a[1]}'"'"')
+ 1165  echo $(ip route get 1.1.1.1)
+ 1166  PS1='$(ip route get 1.1.1.1 | awk -F"src " '"'"'NR == 1{ split($2, a," ");print a[1]}'"'"')'
+ 1167  nano .bashrc
+ 1168  echo $PS1
+ 1169  actapt 
+ 1170  sudo apt -y upgrade
+ 1171  sudo apt -y autoremove
+ 1172  sudo reboot
+ 1173  l
+ 1174  cd ROS2Dev/
+ 1175  l
+ 1176  cd ros2_ws/src/
+ 1177  l
+ 1178  git status
+ 1179  git pull origin main
+ 1180  actapt 
+ 1181  sudo apt upgrade -y
+ 1182  sudo apt autoremove -y
+ 1183  cd ROS2Dev/ros2_ws/src/
+ 1184  l
+ 1185  code .
+ 1186  gst
+ 1187  git status
+ 1188  git push -u origin main
+ 1189  git lg
+ 1190  code .
+ 1191  git status
+ 1192  git add .
+ 1193  git commit -m "Update go_in_circle.py script"
+ 1194  git push -u origin main
+ 1195  refrescar 
+ 1196  ros2 param list 
+ 1197  ros2 param get /tb3_node_py ang_vel 
+ 1198  ros2 param get /tb3_node_py my_int 
+ 1199  ros2 param sel /tb3_node_py my_int 0
+ 1200  ros2 param set /tb3_node_py my_int 0
+ 1201  ros2 param get /tb3_node_py my_int 
+ 1202  ros2 param get /tb3_node_py ang_vel 
+ 1203  ros2 param get /tb3_node_py lin_vel 
+ 1204  ros2 param get /tb3_node_py timer_period 
+ 1205  l
+ 1206  ros2 param dump /tb3_node_py 
+ 1207  ros2 param list 
+ 1208  ros2 param set /tb3_node_py lin_vel 0.1
+ 1209  ros2 param set /tb3_node_py timer_period 0.0
+ 1210  ros2 param set /tb3_node_py timer_period -0.01
+ 1211  ros2 service list
+ 1212  ros2 service call /activate_robot example_interfaces/srv/SetBool data:\ false\ 
+ 1213  ros2 service call /activate_robot example_interfaces/srv/SetBool data:\ true\ 
+ 1214  ros2 service call /activate_robot example_interfaces/srv/SetBool "{data: True}" 
+ 1215  ros2 node info /activate_robot_server
+ 1216  ros2 interface show
+ 1217  ros2 interface show rcl_interfaces/srv/DescribeParameters 
+ 1218  refrescar 
+ 1219  ros2 run tb3ctrl_py robot_client true
+ 1220  ros2 run tb3ctrl_py robot_client false
+ 1221  ros2 run tb3ctrl_py robot_client 1
+ 1222  ros2 run tb3ctrl_py robot_client 0
+ 1223  ros2 run tb3ctrl_py robot_client False
+ 1224  ros2 run tb3ctrl_py robot_client true
+ 1225  ros2 run tb3ctrl_py robot_client false
+ 1226  ros2 run tb3ctrl_py robot_client true
+ 1227  ros2 run tb3ctrl_py robot_client False
+ 1228  ros2 run tb3ctrl_py robot_client True
+ 1229  cd ROS2Dev/ros2_ws/src/
+ 1230  reset 
+ 1231  refrescar 
+ 1232  code .
+ 1233  cd ..
+ 1234  colcon build --symlink-install --packages-select tb3ctrl_py 
+ 1235  colcon build --symlink-install
+ 1236  refrescar 
+ 1237  ros2 run tb3ctrl_py go_cle_py 
+ 1238  chmod +x src/tb3ctrl_py/tb3ctrl_py/activate_robot.py 
+ 1239  colcon build --symlink-install --packages-select tb3ctrl_py 
+ 1240  refrescar 
+ 1241  ros2 run tb3ctrl_py activate_robot_node 
+ 1242  colcon build --symlink-install --packages-select tb3ctrl_py 
+ 1243  refrescar 
+ 1244  colcon build --symlink-install --packages-select tb3ctrl_py 
+ 1245  refrescar 
+ 1246  ros2 run tb3ctrl_py activate_robot_node 
+ 1247  cd ../../turtlebot3_ws/
+ 1248  l
+ 1249  cd src/
+ 1250  l
+ 1251  l
+ 1252  cd ROS2Dev/
+ 1253  l
+ 1254  cd temp/
+ 1255  l
+ 1256  git clone https://github.com/rivascf/dofbotws_vm.git
+ 1257  l
+ 1258  cd ..
+ 1259  l
+ 1260  mkdir -p yahboom_ws/src
+ 1261  cd yahboom_ws/
+ 1262  colcon build
+ 1263  source install/setup.bash
+ 1264  cd src
+ 1265  ros2 pkg create dofbot
+ 1266  cd dof
+ 1267  cd dofbot/
+ 1268  l
+ 1269  rm -rf include/
+ 1270  rm -rf src/
+ 1271  l
+ 1272  mkdir dofbot
+ 1273  mv CMakeLists.txt dofbot/
+ 1274  mv package.xml dofbot/
+ 1275  vim dofbot/CMakeLists.txt 
+ 1276  vim dofbot/package.xml 
+ 1277  cd ..
+ 1278  ros2 pkg create dofbot_description
+ 1279  ros2 pkg create dofbot_interfaces
+ 1280  l
+ 1281  mv -rf dofbot_description/ dofbot/
+ 1282  mv -f dofbot_description/ dofbot/
+ 1283  mv -f dofbot_interfaces/ dofbot/
+ 1284  lt dofbot/
+ 1285  cd dofbot/
+ 1286  l
+ 1287  rm dofbot_description
+ 1288  rm -rf dofbot_description/
+ 1289  rm -rf dofbot_interfaces/
+ 1290  l
+ 1291  ros2 pkg create dofbot_interfaces
+ 1292  l
+ 1293  lt dofbot_interfaces/
+ 1294  rm -rf dofbot_interfaces/include/
+ 1295  rm -rf dofbot_interfaces/src/
+ 1296  lt dofbot_interfaces/
+ 1297  l
+ 1298  cd dofbot_interfaces/
+ 1299  l
+ 1300  mkdir msg
+ 1301  code .
+ 1302  cd ..
+ 1303  l
+ 1304  code .
+ 1305  cd ..
+ 1306  source install/setup.bash
+ 1307  colcon build 
+ 1308  source install/setup.bash
+ 1309  colcon build 
+ 1310  source install/setup.bash
+ 1311  ros2 interface list
+ 1312  colcon build 
+ 1313  source install/setup.bash
+ 1314  ros2 interface list | grep msg
+ 1315  ros2 interface list | grep msgs | grep Dofbot
+ 1316  ros2 interface list | grep msgs | grep dofbot
+ 1317  ros2 interface list | grep dofbot | grep msgs 
+ 1318  ros2 interface list | grep dofbot
+ 1319  ros2 interface list | grep dofbot | grep msg
+ 1320  refrescar 
+ 1321  source install/setup.bash
+ 1322  ros2 interface list | grep dofbot | grep msg
+ 1323  ros2 interface list | grep dofbot | grep Target
+ 1324  l
+ 1325  source ~/ROS2Dev/yahboom_ws/install/setup.bash 
+ 1326  ros2 interface list | grep dofbot | grep Target
+ 1327  ros2 interface list | grep dofbot 
+ 1328  colcon build 
+ 1329  ros2 interface list | grep std
+ 1330  ros2 interface show std_msgs/msg/Header 
+ 1331  colcon build 
+ 1332  ros2 interface show geometry_msgs/msg/Pose
+ 1333  ros2 interface show nav_msgs/msg/Odometry 
+ 1334  colcon build 
+ 1335  pip3 list | grep setuptools
+ 1336  colcon build 
+ 1337  source ~/ROS2Dev/yahboom_ws/install/setup.bash 
+ 1338  ros2 interface list | grep dofbot | grep msg
+ 1339  colcon build 
+ 1340  source ~/ROS2Dev/yahboom_ws/install/setup.bash 
+ 1341  cd src/dofbot/
+ 1342  l
+ 1343  ros2 pkg create dofbot_description
+ 1344  l
+ 1345  cd dofbot_description/
+ 1346  l
+ 1347  rm include/
+ 1348  rm -rf include/ src/
+ 1349  mkdir urdf
+ 1350  mkdir -p assets/meshes/dofbot/collision/
+ 1351  mkdir -p assets/meshes/dofbot/visual/
+ 1352  cp ~/ROS2Dev/temp/dofbotws_vm/dofbot_info/urdf/dofbot.urdf ./urdf/
+ 1353  cp ~/ROS2Dev/temp/dofbotws_vm/dofbot_moveit/urdf/dofbot.urdf ./urdf/dofbot_moveit.urdf 
+ 1354  cp ~/ROS2Dev/temp/dofbotws_vm/dofbot_moveit/urdf/yahboom
+ 1355  lt 
+ 1356  cp ~/ROS2Dev/temp/dofbotws_vm/dofbot_moveit/meshes/*.STL ./assets/meshes/dofbot/visual/
+ 1357  lt 
+ 1358  cd urdf/
+ 1359  l
+ 1360  chmod -x *.urdf
+ 1361  l
+ 1362  exit
+ 1363  cd ../../../turtlebot3_ws/src/
+ 1364  l
+ 1365  cd turtlebot3
+ 1366  l
+ 1367  vim README.md 
+ 1368  cd turtlebot3
+ 1369  l
+ 1370  vim CMakeLists.txt 
+ 1371  cat CMakeLists.txt 
+ 1372  cat package.xml 
+ 1373  cat ~/ROS2Dev/temp/dofbotws_vm/dofbot_info/package.xml 
+ 1374  exit
+ 1375  cd
+ 1376  vim .bash_aliases 
+ 1377  source ~/ROS2Dev/yahboom_ws/install/setup.bash 
+ 1378  ros2 
+ 1379  cd ROS2Dev/yahboom_ws/src/
+ 1380  l
+ 1381  cd dofbot/
+ 1382  l
+ 1383  code .
+ 1384  apt -h
+ 1385  apt list ros-humble-* | grep joint
+ 1386  apt list ros-humble-* | grep xacro
+ 1387  cd ..
+ 1388  l
+ 1389  cd ..
+ 1390  l
+ 1391  cd arrg_ws/src/
+ 1392  l
+ 1393  rm -rf dofbot_description/
+ 1394  ros2 pkg create --build-type ament_cmake two_wheeled_robot
+ 1395  cd two_wheeled_robot/
+ 1396  l
+ 1397  mkdir config launch maps meshes models params rviz urdf worlds
+ 1398  dir
+ 1399  cd ..
+ 1400  colcon build 
+ 1401  colcon_cd two_wheeled_robot
+ 1402  vim urdf/two_wheeled_robot.urdf
+ 1403  mv ~/Downloads/robot_base.stl ./meshes/
+ 1404  l
+ 1405  vim pack
+ 1406  vim package.xml 
+ 1407  vim ./launch/two_wheeled_robot.launch.py
+ 1408  vim ./rviz/rviz_basic_settings.rviz
+ 1409  l rviz/
+ 1410  mv ~/Downloads/rviz_basic_settings.rviz ./rviz/
+ 1411  vim ./rviz/rviz_basic_settings.rviz
+ 1412  vim CMakeLists.txt 
+ 1413  cd ..
+ 1414  colcon build
+ 1415  source install/setup.bash
+ 1416  ros2 launch two_wheeled_robot two_wheeled_robot.launch.py 
+ 1417  apt list ros-humble-* | grep joint
+ 1418  sudo apt install ros-humble-xacro
+ 1419  sudo apt install ros-humble-joint-state-publisher-gui
+ 1420  ros2 launch two_wheeled_robot two_wheeled_robot.launch.py 
+ 1421  cd ROS2Dev/yahboom_ws/
+ 1422  l
+ 1423  colcon build
+ 1424  srcdofbot 
+ 1425  cd src/dofbot/
+ 1426  l
+ 1427  mkdir dofbot_description/rviz
+ 1428  mkdir dofbot_description/launch
+ 1429  touch dofbot_description/launch/dofbot_test.launch.py
+ 1430  vim ~/ROS2Dev/arrg_ws/src/two_wheeled_robot/launch/two_wheeled_robot.launch.py 
+ 1431  cp ~/ROS2Dev/arrg_ws/src/two_wheeled_robot/launch/two_wheeled_robot.launch.py ./dofbot_description/launch/
+ 1432  cp ~/ROS2Dev/arrg_ws/src/two_wheeled_robot/rviz/rviz_basic_settings.rviz ./dofbot_description/rviz/
+ 1433  vim ~/ROS2Dev/arrg_ws/src/two_wheeled_robot/urdf/two_wheeled_robot.urdf 
+ 1434  cd ..
+ 1435  colcon build
+ 1436  srcdofbot 
+ 1437  colcon build --packages-select dofbot
+ 1438  colcon build
+ 1439  source install/setup.bash
+ 1440  ros2 launch dofbot_description dofbot_test.launch.py
+ 1441  source install/setup.bash
+ 1442  colcon build
+ 1443  source install/setup.bash
+ 1444  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1445  vim ~/ROS2Dev/arrg_ws/src/two_wheeled_robot/urdf/two_wheeled_robot.urdf 
+ 1446  colcon build
+ 1447  source install/setup.bash
+ 1448  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1449  colcon build
+ 1450  source install/setup.bash
+ 1451  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1452  colcon build
+ 1453  source install/setup.bash
+ 1454  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1455  colcon build
+ 1456  source install/setup.bash
+ 1457  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1458  colcon build
+ 1459  source install/setup.bash
+ 1460  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1461  colcon build
+ 1462  source install/setup.bash
+ 1463  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1464  ls build/
+ 1465  ls install/dofbot_description/share/
+ 1466  ls install/dofbot_description/share/dofbot_description/
+ 1467  ls install/dofbot_description/share/dofbot_description/assets/
+ 1468  ls install/dofbot_description/share/dofbot_description/assets/meshes/
+ 1469  cd ..
+ 1470  cd arrg_ws/src/two_wheeled_robot/
+ 1471  l
+ 1472  vim urdf/two_wheeled_robot.urdf 
+ 1473  vim urdf/two_wheeled_robot.urdf
+ 1474  vim ~/ROS2Dev/turtlebot3_ws/src/turtlebot3/turtlebot3_description/urdf/common_properties.urdf 
+ 1475  cat ~/ROS2Dev/turtlebot3_ws/src/turtlebot3/turtlebot3_description/urdf/common_properties.urdf 
+ 1476  vim ~/ROS2Dev/turtlebot3_ws/src/turtlebot3/turtlebot3_description/urdf/turtlebot3_waffle.urdf 
+ 1477  cd ~/ROS2Dev/yahboom_ws/src/
+ 1478  l
+ 1479  cd dofbot/
+ 1480  rm dofbot_description/launch/two_wheeled_robot.launch.py 
+ 1481  cd dofbot_description/
+ 1482  l
+ 1483  mkdir -p ./meshes/dofbot/collision
+ 1484  mkdir -p ./meshes/dofbot/visual
+ 1485  l ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/
+ 1486  l ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/meshes/
+ 1487  lt ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/meshes/
+ 1488  cd ..
+ 1489  cd dofbot_description/
+ 1490  l
+ 1491  cp ~/ROS2Dev/temp/dofbotws_vm/dofbot_moveit/meshes/base_link.STL ./meshes/dofbot/visual/
+ 1492  cp ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/meshes/X3plus/visual/arm*.STL ./meshes/dofbot/visual/
+ 1493  cp ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/meshes/X3plus/visual/ll*.STL ./meshes/dofbot/visual/
+ 1494  cp ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/meshes/X3plus/visual/rl*.STL ./meshes/dofbot/visual/
+ 1495  lt ./meshes/dofbot/
+ 1496  cd meshes/dofbot/visual/
+ 1497  l
+ 1498  chmod -x *
+ 1499  l
+ 1500  mv llink*.STL lgrip_finger*.STL
+ 1501  cp llink*.STL lgrip_finger*.STL
+ 1502  mv llink* lgrip_finger*
+ 1503  mmv llink\* lgrip_finger\#1
+ 1504  mv llink1.STL lgrip_finger1.STL
+ 1505  mv llink2.STL lgrip_finger2.STL
+ 1506  mv llink3.STL lgrip_finger3.STL
+ 1507  mv rlink3.STL rgrip_finger3.STL
+ 1508  mv rlink2.STL rgrip_finger2.STL
+ 1509  mv rlink1.STL rgrip_finger1.STL
+ 1510  l
+ 1511  cd ~/ROS2Dev/yahboom_ws/
+ 1512  l
+ 1513  cd src/dofbot/dofbot_description/
+ 1514  l
+ 1515  mkdir -p meshes/dofbot_v1/visual/
+ 1516  lt meshes/
+ 1517  mv assets/meshes/dofbot/visual/* ./meshes/dofbot_v1/visual/
+ 1518  lt meshes/
+ 1519  mv assets/meshes/dofbot/visual/* ./meshes/dofbot_v1/visual/
+ 1520  lt meshes/
+ 1521  rm -rf assets/
+ 1522  cd ~/ROS2Dev/yahboom_ws/
+ 1523  colcon build
+ 1524  source install/setup.bash 
+ 1525  ros2 launch dofbot_description dofbot_test.launch.py 
+ 1526  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1527  colcon build --packages-select dofbot_description 
+ 1528  source install/setup.bash 
+ 1529  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1530  colcon build --packages-select dofbot_description 
+ 1531  source install/setup.bash 
+ 1532  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1533  vim ~/.ros/log/2023-11-19-22-48-26-017040-ros2vm-17276/launch.log 
+ 1534  colcon build --packages-select dofbot_description 
+ 1535  source install/setup.bash 
+ 1536  vim ~/.ros/log/2023-11-19-22-48-26-017040-ros2vm-17276/launch.log 
+ 1537  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1538  colcon build --packages-select dofbot_description 
+ 1539  source install/setup.bash 
+ 1540  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1541  colcon build --packages-select dofbot_description 
+ 1542  source install/setup.bash 
+ 1543  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1544  colcon build --packages-select dofbot_description 
+ 1545  source install/setup.bash 
+ 1546  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1547  colcon build --packages-select dofbot_description 
+ 1548  source install/setup.bash 
+ 1549  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1550  colcon build --packages-select dofbot_description 
+ 1551  source install/setup.bash 
+ 1552  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1553  colcon build --packages-select dofbot_description 
+ 1554  source install/setup.bash 
+ 1555  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1556  colcon build --packages-select dofbot_description 
+ 1557  source install/setup.bash 
+ 1558  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1559  colcon build --packages-select dofbot_description 
+ 1560  source install/setup.bash 
+ 1561  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1562  colcon build --packages-select dofbot_description 
+ 1563  source install/setup.bash 
+ 1564  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1565  colcon build --packages-select dofbot_description 
+ 1566  source install/setup.bash 
+ 1567  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1568  colcon build --packages-select dofbot_description 
+ 1569  source install/setup.bash 
+ 1570  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1571  colcon build --packages-select dofbot_description 
+ 1572  source install/setup.bash 
+ 1573  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1574  colcon build --packages-select dofbot_description 
+ 1575  source install/setup.bash 
+ 1576  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1577  colcon build --packages-select dofbot_description 
+ 1578  source install/setup.bash 
+ 1579  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1580  colcon build --packages-select dofbot_description 
+ 1581  source install/setup.bash 
+ 1582  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1583  colcon build --packages-select dofbot_description 
+ 1584  source install/setup.bash 
+ 1585  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1586  colcon build --packages-select dofbot_description 
+ 1587  source install/setup.bash 
+ 1588  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1589  colcon build --packages-select dofbot_description 
+ 1590  source install/setup.bash 
+ 1591  colcon build --packages-select dofbot_description 
+ 1592  source install/setup.bash 
+ 1593  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1594  colcon build --packages-select dofbot_description 
+ 1595  source install/setup.bash 
+ 1596  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1597  colcon build --packages-select dofbot_description 
+ 1598  source install/setup.bash 
+ 1599  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1600  cd ../temp/dofbotws_vm/dofbot_config/
+ 1601  l
+ 1602  lt
+ 1603  vim config/fake_controllers.yaml 
+ 1604  vim config/gazebo_controllers.yaml 
+ 1605  vim config/simple_moveit_controllers.yaml 
+ 1606  cd ..
+ 1607  l
+ 1608  lt dofbot_moveit/
+ 1609  vim  dofbot_moveit/urdf/dofbot.urdf 
+ 1610  vim  dofbot_moveit/urdf/yahboomcar_X3plus.urdf 
+ 1611  cp  dofbot_moveit/urdf/yahboomcar_X3plus.urdf ~/ROS2Dev/yahboom_ws/src/dofbot/dofbot_description/urdf/yahboomcar_X3plus_ctrl.urdf 
+ 1612  vim dofbot_moveit/launch/dofbot_moveit.launch 
+ 1613  cp  dofbot_config/config/* ~/ROS2Dev/yahboom_ws/src/dofbot/dofbot_config/config/
+ 1614  srcdofbot 
+ 1615  ros2 node list
+ 1616  ros2 topic list
+ 1617  ros2 topic echo /joint_states 
+ 1618  ros2 param list
+ 1619  ros2 service list
+ 1620  ros2 service call  /robot_state_publisher/list_parameters rcl_interfaces/srv/ListParameters "{}"
+ 1621  lt dofbot_info/
+ 1622  lt yahboomcar_description/
+ 1623  cp yahboomcar_description/urdf/yahboomcar_X3plus.gazebo.xacro ~/ROS2Dev/yahboom_ws/src/dofbot/dofbot_description/urdf/
+ 1624  cp yahboomcar_description/urdf/yahboomcar_X3plus.gazebo.urdf.xacro ~/ROS2Dev/yahboom_ws/src/dofbot/dofbot_description/urdf/
+ 1625  lt ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/urdf/
+ 1626  vim ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/urdf/yahboomcar_X3plus.urdf
+ 1627  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1628  srcdofbot 
+ 1629  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1630  vim ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/urdf/yahboomcar_X3plus.urdf
+ 1631  cp ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/urdf/yahboomcar_X3plus.urdf ~/ROS2Dev/yahboom_ws/src/dofbot/dofbot_description/urdf/
+ 1632  cd ROS2Dev/yahboom_ws/
+ 1633  mkdir -p ./src/dofbot/dofbot_description/meshes/sensor/visual/
+ 1634  cp ~/ROS2Dev/temp/dofbotws_vm/yahboomcar_description/meshes/sensor/visual/mono_link.STL ~/ROS2Dev/yahboom_ws/src/dofbot/dofbot_description/meshes/sensor/visual/
+ 1635  colcon build --packages-select dofbot_description 
+ 1636  source install/setup.bash 
+ 1637  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1638  colcon build --packages-select dofbot_description 
+ 1639  source install/setup.bash 
+ 1640  ros2 launch dofbot_description dofbot_arm.launch.py 
+ 1641  rm src/dofbot/dofbot_description/urdf/old*
+ 1642  rm src/dofbot/dofbot_description/urdf/dofbot_arm_temp.urdf 
+ 1643  cd src/dofbot/
+ 1644  l
+ 1645  ros2 pkg create --build-type ament_cmake dofbot_config
+ 1646  cd ..
+ 1647  colcon build --packages-select dofbot_description 
+ 1648  colcon build 
+ 1649  source install/setup.bash 
+ 1650  rm -rf src/dofbot/dofbot_config/include/
+ 1651  rm -rf src/dofbot/dofbot_config/src/
+ 1652  colcon build 
+ 1653  source install/setup.bash 
+ 1654  colcon build 
+ 1655  source install/setup.bash 
+ 1656  ros2 launch dofbot_description dofbot_arm_ctrl.launch.py 
+ 1657  colcon build 
+ 1658  source install/setup.bash 
+ 1659  ros2 launch dofbot_description dofbot_arm_ctrl.launch.py 
+ 1660  srcdofbot 
+ 1661  cd ROS2Dev/yahboom_ws/
+ 1662  colcon build 
+ 1663  source install/setup.bash 
+ 1664  ros2 launch dofbot_description dofbot_arm_ctrl.launch.py 
+ 1665  colcon build 
+ 1666  source install/setup.bash 
+ 1667  ros2 launch dofbot_description dofbot_arm_ctrl.launch.py 
+ 1668  gazebo
+ 1669  colcon build --packages-select dofbot_description 
+ 1670  colcon build 
+ 1671  source install/setup.bash 
+ 1672  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1673  colcon build 
+ 1674  source install/setup.bash 
+ 1675  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1676  colcon build 
+ 1677  source install/setup.bash 
+ 1678  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1679  colcon build 
+ 1680  source install/setup.bash 
+ 1681  export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/arrusr/ROS2Dev/yahboom_ws/src/dofbot/dofbot_description/models
+ 1682  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1683  colcon build 
+ 1684  source install/setup.bash 
+ 1685  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1686  colcon build 
+ 1687  source install/setup.bash 
+ 1688  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1689  colcon build 
+ 1690  source install/setup.bash 
+ 1691  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1692  colcon build 
+ 1693  source install/setup.bash 
+ 1694  ros2 launch dofbot_description dofbot_gazebo.launch.py 
+ 1695  cd
+ 1696  l
+ 1697  history >> ros2vm-history-201123.txt
